@@ -30,6 +30,7 @@ namespace RoomGame
             foreach(Journey x in exits)
             {
                 Console.WriteLine($"{i}. {x.Description}");
+                i++;
             }
         }
         public void takeExit(int value)
@@ -41,7 +42,7 @@ namespace RoomGame
 
         public void addExit(Journey journey)
         {
-            //Adds indicated journey to a rooom
+            //Adds indicated journey to a room
             exits.Add(journey);
         }
         public void removeExit(Journey journey)
