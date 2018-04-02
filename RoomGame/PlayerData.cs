@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace RoomGame
 {
-    class RoomExit
+    class PlayerData
     {
-        public string Description { get; set; }
-        public Journey 
+        public static int Health { get; set; }
     }
 }
