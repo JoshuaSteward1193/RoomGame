@@ -9,6 +9,7 @@ namespace RoomGame
     class ProgramData
     {
         public static int numberOfPeople = 0;
+        public static int numberOfInteractables = 0;
         public static List<Room> rooms = new List<Room>();
         public static List<Journey> journeys = new List<Journey>();
         public static List<Person> people = new List<Person>();
@@ -44,6 +45,11 @@ namespace RoomGame
         {
             Console.WriteLine("Loading people....");
             /* 0 */ people.Add(new Person("Toby", "Johnson", rooms[3] ,60));
+        }
+
+        public static void enactInteractable(int id)
+        {
+
         }
     }
 }

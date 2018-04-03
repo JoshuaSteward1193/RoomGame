@@ -24,9 +24,13 @@ namespace RoomGame
         public void display()
         {
             //Prints relevant information to the console
-            Console.WriteLine(Description);
-            Console.WriteLine("");
             int i = 1;
+            Console.WriteLine(Description);
+            foreach(Interactable x in interactables)
+            {
+                Console.WriteLine($"{i}. {x.Command}");
+            }            
+            
             foreach(Journey x in exits)
             {
                 Console.WriteLine($"{i}. {x.Description}");
