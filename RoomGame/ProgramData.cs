@@ -43,7 +43,7 @@ namespace RoomGame
         public static void loadPeople()
         {
             Console.WriteLine("Loading people....");
-            /* 0 */ people.Add(new Person("Toby", "Johnson", rooms[4] ,60));
+            /* 0 */ people.Add(new Person("Toby", "Johnson", rooms[3] ,60));
         }
     }
 }
