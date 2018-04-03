@@ -8,6 +8,7 @@ namespace RoomGame
 {
     class Interactable
     {
+        public bool Usable { get; set; }
         public int ID { get; set; }
         public int MethodCall { get; set; }    // The id number of the method that this interactable enacts
         public int Uses { get; set; }          // The number of times the interactable can be used before it no longer appears
@@ -24,6 +25,13 @@ namespace RoomGame
             Command = c;
             Action = a;
             Uses = u;
+            if(Uses > 0)
+            {
+                Usable = true;
+            } else
+            {
+                Usable = false;
+            }
         }
         //NEED: A BOOL THAT IS TRUE WHILE USES > 0
         //THIS BOOL WILL TELL ROOM.DISPLAY() WHETHER TO SHOW AN INTERACTABLE OR NOT. 
@@ -31,6 +39,10 @@ namespace RoomGame
         public void enact()
         {
             Uses--;
+            if(Uses == 0)
+            {
+                Usable = false;
+            }
             Console.WriteLine(Action);
             ProgramData.enactInteractable(MethodCall);
         }
