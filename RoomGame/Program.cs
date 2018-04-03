@@ -17,11 +17,14 @@ namespace RoomGame
             ProgramData.loadRooms();
             ProgramData.loadJourneys();
             ProgramData.applyJourneys();
+            ProgramData.loadInteractables();
+            ProgramData.applyInteractables();
             ProgramData.loadPeople();
 
             PlayerData.Health = 10;
             ProgramData.currentLocation = ProgramData.rooms[0];
 
+            
             while (PlayerData.Health > 0)
             {
                 //MAIN GAME LOOP

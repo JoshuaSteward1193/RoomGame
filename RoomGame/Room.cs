@@ -28,9 +28,15 @@ namespace RoomGame
             Console.WriteLine(Description);
             foreach(Interactable x in interactables)
             {
+                Console.WriteLine($"{x.Description}");
+            }
+            Console.WriteLine("");
+
+            foreach(Interactable x in interactables)
+            {
                 Console.WriteLine($"{i}. {x.Command}");
+                i++;
             }            
-            
             foreach(Journey x in exits)
             {
                 Console.WriteLine($"{i}. {x.Description}");
@@ -43,6 +49,12 @@ namespace RoomGame
             //Input validation is done in the InputHandler.roomAction() method
             exits[value].enact();
         }
+        public void useInteractable(int value)
+        {
+            //Enacts the actions of the indicated interactable
+            //The input handler decides if input is asking for a journey or an interactable
+            interactables[value].enact();
+        }
 
         public void addExit(Journey journey)
         {
@@ -52,6 +64,10 @@ namespace RoomGame
         public void removeExit(Journey journey)
         {
             //Removes indicated journey from a room
+        }
+        public void addInteractable(Interactable interactable)
+        {
+            interactables.Add(interactable);
         }
         public void addOccupant(Person o)
         {
