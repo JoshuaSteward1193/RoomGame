@@ -29,15 +29,22 @@ namespace RoomGame
             {
                 //MAIN GAME LOOP
                 ProgramData.currentLocation.display();
-                int x;
-                if (Int32.TryParse(Console.ReadLine(), out x))
+                bool goodInput = false;
+                while (!goodInput)
                 {
-                    InputHandler.roomAction(x);
+                    int x;
+                    if (Int32.TryParse(Console.ReadLine(), out x))
+                    {
+                        goodInput = true;
+                        InputHandler.roomAction(x);
+                    }
+                    else
+                    {
+                        goodInput = false;
+                        Console.WriteLine("Please enter an integer that matches one of the numbered commands.");
+                    }
                 }
-                else
-                {
-                    Console.WriteLine("Please enter an integer that matches one of the numbered commands.");
-                }                
+                                
             }            
         }
     }

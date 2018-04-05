@@ -55,7 +55,7 @@ namespace RoomGame
         public static void loadPeople()
         {
             Console.WriteLine("Loading people....");
-            people.Add(new Person("Toby", "Johnson", rooms[3] ,60)); /* 0 */
+            people.Add(new Person("Toby", "Johnson", rooms[3], 60)); /* 0 */
         }
 
         public static void enactInteractable(int id)

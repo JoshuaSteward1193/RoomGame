@@ -23,9 +23,7 @@ namespace RoomGame
 
         public void display()
         {
-            //Prints relevant information to the console
-            //NEED: DETERMINE IF INTERACTABLE HAS BEEN ENACTED BEFORE
-            //IF IT HAS BEEN 'USED UP' THEN IT SHOULD NOT APPEAR.
+            //Prints relevant information to the console            
             int i = 1;
             Console.WriteLine(Description);
             foreach(Interactable x in interactables)
@@ -70,6 +68,10 @@ namespace RoomGame
         public void addInteractable(Interactable interactable)
         {
             interactables.Add(interactable);
+        }
+        public void removeInteractable(int id)
+        {
+            interactables.Remove(interactables.SingleOrDefault(x => x.ID == id));
         }
         public void addOccupant(Person o)
         {

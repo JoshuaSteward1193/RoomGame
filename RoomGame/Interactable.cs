@@ -32,19 +32,18 @@ namespace RoomGame
             {
                 Usable = false;
             }
-        }
-        //NEED: A BOOL THAT IS TRUE WHILE USES > 0
-        //THIS BOOL WILL TELL ROOM.DISPLAY() WHETHER TO SHOW AN INTERACTABLE OR NOT. 
+        }        
 
         public void enact()
         {
             Uses--;
-            if(Uses == 0)
-            {
-                Usable = false;
-            }
+            
             Console.WriteLine(Action);
             ProgramData.enactInteractable(MethodCall);
+            if (Uses == 0)
+            {
+                ProgramData.currentLocation.removeInteractable(ID);
+            }
         }
 
     }
