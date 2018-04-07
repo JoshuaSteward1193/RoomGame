@@ -9,5 +9,6 @@ namespace RoomGame
     class PlayerData
     {
         public static int Health { get; set; }
+        public static string Name { get; set; }
     }
 }

@@ -25,6 +25,7 @@ namespace RoomGame
         {
             //Prints relevant information to the console            
             int i = 1;
+            int order = 1;
             Console.WriteLine(Description);
             foreach(Interactable x in interactables)
             {
