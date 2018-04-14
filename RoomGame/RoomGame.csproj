@@ -42,11 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Consumable.cs" />
     <Compile Include="InputHandler.cs" />
     <Compile Include="Interactable.cs" />
+    <Compile Include="Item.cs" />
     <Compile Include="Journey.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="PlayerData.cs" />
+    <Compile Include="Potion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgramData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
