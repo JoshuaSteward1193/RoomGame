@@ -26,5 +26,13 @@ namespace RoomGame
                 Console.WriteLine("The entered number does not match an applicible command.");
             }
         }
+        public static void menuCommand(string input)
+        {
+            switch (input.ToLower())
+            {
+                case "i":
+
+            }
+        }
     }
 }

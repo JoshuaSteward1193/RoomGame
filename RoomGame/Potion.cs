@@ -12,14 +12,14 @@ namespace RoomGame
         public int Strength { get; set; }
         public enum Type { healing, poision, resting }
         public Type PotionType;
-        public Potion(string n, string pn, string ft, string ut, Type pt, int s)
+        public Potion(string name, string pluralName, string flavText, string useText, Type type, int strength)
         {
-            Name = n;
-            PluralName = pn;
-            FlavorText = ft;
-            UseText = ut;
-            PotionType = pt;
-            Strength = s;
+            Name = name;
+            PluralName = pluralName;
+            FlavorText = flavText;
+            UseText = useText;
+            PotionType = type;
+            Strength = strength;
         }
 
         override public void use()
