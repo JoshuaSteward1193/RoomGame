@@ -59,7 +59,7 @@ namespace RoomGame
 
         private static string header()
         {
-            return $"{PlayerData.Name} | Health: {PlayerData.Health} | Turn: {TurnNum} + | {ProgramData.currentLocation.Name}";
+            return $"{PlayerData.Name} | Health: {PlayerData.Health} | Turn: {TurnNum} | {ProgramData.currentLocation.Name}";
         }
     }
 }
